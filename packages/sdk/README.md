@@ -43,7 +43,7 @@ const pruntimeURL = 'http://127.0.0.1:8000';  // assuming the default port
 const contractId = '0xa5ef1d6cb746b21a481c937870ba491d6fe120747bbeb5304c17de132e8d0392';  // your contract id
 const metadata = /* load the metadata.json... */;
 const contract = new ContractPromise(
-    await create({api, baseURL: pruntimeURL, contractId}),
+    await create({api, baseURL: pruntimeURL, contractId}).api,
     JSON.parse(metadata),
     contractId
 );
